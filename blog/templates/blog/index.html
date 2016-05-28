@@ -1,0 +1,9 @@
+
+<a type="button" class="btn btn-default" href="{% url 'blog:post-create' %}">글쓰기 </a>
+
+{% for post in post_list %}
+    <ul>
+        <a href="{% url 'blog:detail' post.pk %}">{{ post.title }} [{{post.comment_set.all.count}}]</a>
+    </ul>
+
+{% endfor %}
