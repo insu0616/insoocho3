@@ -1,4 +1,6 @@
+{% extends 'blog/base.html' %}
 
+{% block body %}
 <a type="button" class="btn btn-default" href="{% url 'blog:post-create' %}">글쓰기 </a>
 
 {% for post in post_list %}
@@ -7,3 +9,4 @@
     </ul>
 
 {% endfor %}
+{% endblock %}
